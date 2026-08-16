@@ -72,6 +72,43 @@ python3 service/scripts/clean_file.py draft.md -o draft.cleaned.md
 Install as a Claude Code skill with `make install-claude-skill`, then ask Claude to
 "strip AI watermarks from this file."
 
+### What it looks like
+
+A markdown file with a ChatGPT generator tag, a zero-width space and an
+ideographic space:
+
+```text
+$ python3 service/scripts/inspect_file.py notes.md
+Format: markdown
+C2PA: False
+AI metadata: True
+  - [probable] frontmatter key: generator
+  - [probable] frontmatter value hit on generator
+  - [probable] layer-a: U+200B ZERO WIDTH SPACE (Cf) x1 (zwj_family)
+  - [probable] layer-a: U+3000 IDEOGRAPHIC SPACE (Zs) x1 (space)
+
+$ python3 service/scripts/clean_file.py notes.md -o notes.cleaned.md
+wrote notes.cleaned.md format=markdown
+  - drop frontmatter key: generator
+  - layer A text: removed=1 replaced=1
+```
+
+The cleaned file keeps every visible character; only the generator key and the
+invisible codepoints are gone.
+
+### When to use it
+
+- Stripping tool and AI provenance from your own files before sharing them
+- Cleaning invisible Unicode that breaks diffs, search, copy-paste or shell scripts
+- Checking what provenance a file you received actually carries
+- Research into how provenance marks work across vendors
+
+**When not to use it:** erasing a visible watermark from a picture (that is
+inpainting, see [alternatives](#alternatives-and-related-tools)), defeating a
+statistical watermark with a guarantee (impossible to verify without vendor
+keys), or misrepresenting authorship where disclosure is required (see
+[ethics](skills/remove-claude-marks/references/ethics.md)).
+
 **Docs:** [Installation](docs/installation.md) · [Vendor coverage](docs/vendor-coverage.md) ·
 [FAQ](docs/faq.md) · [Changelog](CHANGELOG.md) · [All documentation](docs/README.md)
 

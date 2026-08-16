@@ -1,5 +1,15 @@
 # FAQ
 
+## Does this remove visible watermarks or logos from images?
+
+No. Erasing a visible watermark, logo or text overlay from a picture is image
+inpainting, a machine-learning task this project does not attempt. Tools like
+[WatermarkRemover-AI](https://github.com/D-Ogi/WatermarkRemover-AI) do that.
+
+This project removes **machine-readable provenance marks**: invisible Unicode
+characters in text, and metadata (C2PA, EXIF, XMP, generator tags) in files.
+Nothing it does changes how an image looks.
+
 ## What is an AI watermark?
 
 Three different things get called a watermark, and they need different treatment.

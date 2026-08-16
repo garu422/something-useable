@@ -22,6 +22,11 @@ Runs entirely on your machine. Python standard library only: no API key, no acco
 no upload, no `pip install`. Works as a CLI, as an agent skill for Claude Code and
 Cursor, or as a local HTTP service.
 
+Not an image-inpainting tool: it does not erase visible watermarks, logos, or text
+overlays from pictures. It removes machine-readable provenance marks (hidden
+characters and metadata). For visible-logo removal, see
+[alternatives](#alternatives-and-related-tools).
+
 | Layer | Target | How |
 | --- | --- | --- |
 | **A** | Invisible Unicode, exotic spaces, bidi, tag chars | Deterministic Python scripts |
@@ -725,6 +730,21 @@ Matrix: [`skills/remove-claude-marks/references/removal-matrix.md`](skills/remov
 See [`skills/remove-claude-marks/references/ethics.md`](skills/remove-claude-marks/references/ethics.md). For privacy and research on **your** content — not academic fraud or false “human-written” claims.
 
 **Responsible use:** This project is for content you own or are authorized to process. Users must adhere to local regulations and use it responsibly. The developers disclaim any liability for potential misuse by users.
+
+## Alternatives and related tools
+
+Different tools solve different parts of this space. Pick by what you actually need.
+
+| If you need | Use | Notes |
+| --- | --- | --- |
+| Invisible Unicode + C2PA/EXIF/XMP + document metadata, text and files, local CLI + agent skill | **this project** | The combination is the point: one tool covers text, images and documents |
+| Erasing a visible watermark, logo or text overlay from an image | [WatermarkRemover-AI](https://github.com/D-Ogi/WatermarkRemover-AI), [zuruoke/watermark-removal](https://github.com/zuruoke/watermark-removal) | ML inpainting. Completely different problem; this project does not do it |
+| Only cleaning invisible Unicode from AI text | [UnicodeFix](https://github.com/unixwzrd/UnicodeFix), [kovart/invisible-text](https://github.com/kovart/invisible-text) | Simpler, text-only. This project adds file/metadata coverage, two-tier vendor detection and the agent skill |
+| Image/video provenance marks specifically | [wiltodelta/remove-ai-watermarks](https://github.com/wiltodelta/remove-ai-watermarks) | Python library for SynthID/C2PA/EXIF/IPTC/XMP on images and video; no text layer |
+| General metadata anonymization (not AI-specific) | [mat2](https://0xacab.org/jvoisin/mat2), [exiftool](https://exiftool.org/) | Battle-tested strippers; no AI-vendor detection, no Unicode layer, no report of what was found |
+| Inspecting or signing C2PA manifests | [c2patool](https://github.com/contentauth/c2pa-rs) | The reference implementation; this project auto-uses it when installed |
+| Detecting/embedding research text watermarks | [MarkLLM](https://github.com/THU-BPM/MarkLLM), [synthid-text](https://github.com/google-deepmind/synthid-text) | Research harnesses; this project wires MarkLLM as an optional verifier |
+| The upstream this was forked from | [watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover) | This fork adds the self-contained Claude Code skill/plugin, 30+ vendor two-tier detection, and the docs/FAQ set |
 
 ## Ecosystem
 

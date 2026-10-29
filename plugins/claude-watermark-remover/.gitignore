@@ -1,0 +1,49 @@
+# Deny by default: only what is explicitly allowed below can be added to git.
+# Local test artifacts, secrets (.env), and tooling stay out without a rule
+# for each one. Tracked files are unaffected.
+#
+# Note on the shape of this file: git will not descend into an excluded
+# directory, so a parent must be re-included before any rule inside it can
+# match. Every allowed tree therefore needs its own `!/dir/` line — listing
+# only `!/dir/subdir/**` silently matches nothing.
+/*
+
+# Allowed trees
+!/.github/
+!/.claude-plugin/
+!/docs/
+!/integrations/
+!/service/
+!/skills/
+!/tests/
+
+# Allowed root files
+!/.dockerignore
+!/.env.example
+!/.gitignore
+!/CHANGELOG.md
+!/CODE_OF_CONDUCT.md
+!/compose-check.sh
+!/compose.yaml
+!/CONTRIBUTING.md
+!/install-skill.sh
+!/install_skill.py
+!/LICENSE
+!/llms.txt
+!/Makefile
+!/pytest.ini
+!/README.md
+!/requirements-dev.txt
+!/SECURITY.md
+
+# Exceptions even inside allowed trees
+.env
+**/__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.firecrawl/
+.figlet/
+posts.md
+*.cleaned.*
+*.bak

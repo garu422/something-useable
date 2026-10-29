@@ -1,0 +1,17 @@
+{
+  "name": "awesome-claude-skills",
+  "description": "ComposioHQ/awesome-claude-skills 모음 중 범용 스킬 27개 — 디자인·문서 작성·파일 정리·개발 도구·마케팅·앱 연결 (Anthropic 문서 스킬 4개는 라이선스상 제외).",
+  "author": { "name": "ComposioHQ and contributors", "url": "https://github.com/ComposioHQ" },
+  "homepage": "https://github.com/ComposioHQ/awesome-claude-skills",
+  "repository": "https://github.com/ComposioHQ/awesome-claude-skills",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "design", "writing", "productivity", "developer-tools", "composio"],
+  "skills": [
+    "./artifacts-builder", "./brand-guidelines", "./canvas-design", "./theme-factory", "./slack-gif-creator", "./image-enhancer",
+    "./content-research-writer", "./internal-comms", "./changelog-generator", "./tailored-resume-generator",
+    "./file-organizer", "./invoice-organizer", "./meeting-insights-analyzer", "./raffle-winner-picker", "./video-downloader",
+    "./mcp-builder", "./skill-creator", "./webapp-testing", "./langsmith-fetch", "./developer-growth-analysis",
+    "./competitive-ads-extractor", "./lead-research-assistant", "./domain-name-brainstormer", "./twitter-algorithm-optimizer",
+    "./connect", "./connect-apps", "./skill-share"
+  ]
+}

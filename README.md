@@ -1,3 +1,12 @@
+> **something-useable — 쓸 만한 Claude 스킬 모음 (개인용 복사본)**
+>
+> | 도구 | 하는 일 | 위치 | 원본 |
+> |---|---|---|---|
+> | jobstack | 한국 취업 준비 스킬 16개 (이력서·자소서·기업분석·모의면접·지원 추적) | 저장소 루트 | [thesun4sky/jobstack](https://github.com/thesun4sky/jobstack) (MIT) |
+> | awesome-claude-skills | 범용 스킬 27개 (디자인·글쓰기·파일 정리·개발 도구·마케팅·앱 연결) | `plugins/awesome-claude-skills` | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) (Apache-2.0, 바꾼 점은 그 폴더의 `NOTICE.md`) |
+>
+> Claude 앱 **Customize → Plugins → Add marketplace**에 이 저장소 주소를 넣으면 두 도구를 각각 설치할 수 있습니다. 아래는 jobstack 원본 설명입니다.
+
 # jobstack
 
 **한국 취업 통합 엑셀러레이터** — Claude Code 스킬 시스템

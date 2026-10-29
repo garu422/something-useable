@@ -18,6 +18,13 @@
       "description": "ComposioHQ/awesome-claude-skills 범용 스킬 27개 — 디자인·글쓰기·파일 정리·개발 도구·마케팅·앱 연결",
       "category": "productivity",
       "homepage": "https://github.com/ComposioHQ/awesome-claude-skills"
+    },
+    {
+      "name": "claude-watermark-remover",
+      "source": "./plugins/claude-watermark-remover",
+      "description": "글·그림·문서에 남은 AI 출처 표시(보이지 않는 문자, C2PA, EXIF/XMP, 문서 속성)를 검사하고 지우는 스킬",
+      "category": "productivity",
+      "homepage": "https://github.com/haidrrrry/claude-watermark-remover"
     }
   ]
 }

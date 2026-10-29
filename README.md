@@ -5,8 +5,9 @@
 > | jobstack | 한국 취업 준비 스킬 16개 (이력서·자소서·기업분석·모의면접·지원 추적) | 저장소 루트 | [thesun4sky/jobstack](https://github.com/thesun4sky/jobstack) (MIT) |
 > | awesome-claude-skills | 범용 스킬 27개 (디자인·글쓰기·파일 정리·개발 도구·마케팅·앱 연결) | `plugins/awesome-claude-skills` | [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) (Apache-2.0, 바꾼 점은 그 폴더의 `NOTICE.md`) |
 > | claude-watermark-remover | 글·그림·문서에 남은 AI 출처 표시(보이지 않는 문자, C2PA, EXIF/XMP, 문서 속성) 검사·제거 | `plugins/claude-watermark-remover` | [haidrrrry/claude-watermark-remover](https://github.com/haidrrrry/claude-watermark-remover) (MIT) |
+> | agency-agents | 분야별 전문가 AI 도우미(서브에이전트) 283명, 18개 분야 — 분야마다 `agency-<분야>` 플러그인으로 따로 설치 | `plugins/agency-agents` | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (MIT) |
 >
-> Claude 앱 **Customize → Plugins → Add marketplace**에 이 저장소 주소를 넣으면 세 도구를 각각 설치할 수 있습니다. 아래는 jobstack 원본 설명입니다.
+> Claude 앱 **Customize → Plugins → Add marketplace**에 이 저장소 주소를 넣으면 도구를 각각 설치할 수 있습니다. 아래는 jobstack 원본 설명입니다.
 
 # jobstack
 
